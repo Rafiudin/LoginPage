@@ -71,7 +71,7 @@ form.sign-in-form {
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
-  height: 55px;
+  height: 3rem;
   border-radius: 55px;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -81,7 +81,7 @@ form.sign-in-form {
 
 .input-field i {
   text-align: center;
-  line-height: 55px;
+  line-height: 45px;
   color: #acacac;
   transition: 0.5s;
   font-size: 1.1rem;
@@ -134,7 +134,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color:#28a745 ;
   border: none;
   outline: none;
   height: 49px;
@@ -148,7 +148,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #28a745 ;
 }
 .panels-container {
   position: absolute;
@@ -272,7 +272,7 @@ form.sign-in-form {
 
 @media (max-width: 870px) {
   .container {
-    min-height: 800px;
+    min-height: 880px;
     height: 100vh;
   }
   .signin-signup {
@@ -397,4 +397,59 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background:#f0f0f0;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  max-width: 380px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 55px;
+  position: relative;
+  display: flex;
+  height: 3em;
+  line-height: 3;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+select {
+  flex: 1;
+  padding: 0 1.3em;
+  color: #acacac;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #28a745;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f0f0f0;
 }
